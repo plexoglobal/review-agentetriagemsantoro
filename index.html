@@ -924,7 +924,11 @@
       .report-shell,
       .paths,
       .flow,
-      .mini-timeline {
+      .mini-timeline,
+      .report-dashboard,
+      .report-split,
+      .case-grid-v2,
+      .insight-grid {
         grid-template-columns: 1fr;
       }
 
@@ -947,17 +951,6 @@
         display: none;
       }
 
-      .hero-grid,
-      .section-head,
-      .grid-2,
-      .grid-3,
-      .comparison,
-      .report-shell,
-      .paths,
-      .flow {
-        grid-template-columns: 1fr;
-      }
-
       .nav-inner {
         align-items: flex-start;
         flex-direction: column;
@@ -966,6 +959,131 @@
 
       .nav-links {
         justify-content: flex-start;
+      }
+
+      .report-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page,
+      .nav-inner {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .hero {
+        padding: 38px 0 28px;
+      }
+
+      .hero-card,
+      .card,
+      .compare-card,
+      .path-card,
+      .status-card {
+        border-radius: 22px;
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: clamp(34px, 13vw, 48px);
+        line-height: 0.98;
+        letter-spacing: -0.06em;
+      }
+
+      h2 {
+        font-size: clamp(28px, 10vw, 38px);
+        line-height: 1;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .pill-row {
+        gap: 7px;
+      }
+
+      .pill {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+
+      .section {
+        padding: 28px 0;
+      }
+
+      .mini-timeline {
+        gap: 12px;
+      }
+
+      .mini-content {
+        min-height: unset;
+        padding: 16px;
+      }
+
+      .report-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .metric strong {
+        font-size: 34px;
+      }
+
+      .attention-item {
+        grid-template-columns: 1fr;
+      }
+
+      .case-card-v2 {
+        border-radius: 22px;
+        padding: 18px;
+      }
+
+      .case-topline {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .case-card-v2 h3 {
+        font-size: 19px;
+      }
+
+      .case-block-v2,
+      .case-action {
+        padding: 13px;
+      }
+
+      .flow-step {
+        min-height: unset;
+      }
+
+      .table-wrap {
+        margin-inline: -6px;
+        width: calc(100% + 12px);
+      }
+
+      table {
+        min-width: 720px;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        font-size: 13px;
       }
     }
 
